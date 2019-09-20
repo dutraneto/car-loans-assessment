@@ -1,0 +1,23 @@
+/*
+
+ploblem3: Search text
+Author: Jose Dutra
+Assessment
+Starts on: 09/17/19
+
+*/
+
+:root {
+  --green: #17C687;
+}
+
+.container {
+  margin: 2rem auto;
+  width: 100%;
+  height: 100px;
+  border: 3px solid var(--green);
+}
+
+#results {
+  margin: 1rem;
+}

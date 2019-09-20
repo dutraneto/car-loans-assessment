@@ -1,0 +1,119 @@
+/*
+
+ploblem1: Rotator
+Author: Jose Dutra
+Assessment
+Starts on: 09/17/19
+
+*/
+
+/* I decided to use CSS instead of JS
+	because I thought that would be an interesting
+	and an elegant approach
+*/
+
+:root {
+  --green: #17C687;
+  --white: #FFF;
+}
+
+#rotator {
+  background-color: var(--white);
+  width: 450px;
+  height: 300px;
+  list-style: none;
+  position: relative;
+}
+
+#rotator li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  /* It could be => animation: imageAnimation 12s linear infinite*/
+  -webkit-animation-name: imageAnimation;
+  animation-name: imageAnimation;
+  -webkit-animation-duration: 12s;
+  animation-duration: 12s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+#rotator li:nth-child(1) {
+  background-image: url(../img/3:4_front_view.jpg);
+}
+
+#rotator li:nth-child(2) {
+  background-image: url(../img/3:4_rear_view.jpg);
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+#rotator li:nth-child(3) {
+  background-image: url(../img/3:4_rear_view_open.jpg);
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+#rotator li:nth-child(4) {
+  background-image: url(../img/front_view.jpg);
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s;
+}
+
+#rotator h4 {
+  color: var(--green);
+  margin-left: 20px;
+}
+
+/* ANIMATION */
+@-webkit-keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+}
